@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mapka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="gallery.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a class="navbar-brand" href="index.html">Galéria</a>
+      <a class="navbar-brand" href="map.html">Mapa</a>
+    </nav>
+  </header>
+  <div class="controls">
+    <button id="show" class="controlItem">Ukáž cestu</button>
+    <span id="routeLen" class="controlItem">Cesta nie je zapnutá</span>
+  </div>
+
+  <div class="container">
+    <div id="map" class = "mapMap"></div>
+  </div>
+
+
+  <div id="modalGallery">
+    <button id="closeGallery">Zavri galériu</button>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators" id="cIndicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+
+      <div class="carousel-inner" id=innerCarousel>
+        <div class="item active"><img src="./images/branka1.jpg" alt="Bránka na platni">
+
+        </div>
+        <div class="item"><img src="./images/ruina.jpg" alt="Rozpadnutá strecha domu">
+
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <button id="stopSlideShow">&#x23F5; &#x23F8;</button>
+
+  </div>
+
+
+
+  <script type="module" src="map.js"></script>
+
+</body>
+
+</html>

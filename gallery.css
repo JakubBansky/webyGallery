@@ -1,0 +1,176 @@
+header {
+	background-color: rgb(219, 200, 177);
+}
+.container-filter {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+	max-width: 300px;
+	min-width: 150px;
+}
+.thContainer {
+	cursor: pointer;
+	width: 20rem;
+	height: 20rem;
+	padding: 0;
+}
+.thContainer img {
+	width: 100%;
+	height: 100%;
+	border: 2px dashed rgb(188, 159, 124);
+	object-fit: cover;
+}
+
+#myCarousel {
+	margin: 1rem;
+	height: 80%;
+	width: 70%;
+}
+.carousel-inner {
+	margin-top: 0rem;
+}
+.carousel-inner .item {
+	/* height: 700px; */
+	/* Set the desired fixed height for the carousel items */
+	/* overflow:scroll; */
+	object-fit: fill;
+	/* Ensure that images don't overflow the fixed height */
+}
+
+.carousel-inner img {
+	width: 100%;
+	object-fit: cover;
+	/* Make the images fill the entire width of the parent container */
+	/* height: auto; */
+	/* Maintain the aspect ratio of the images */
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+    list-style: none;
+}
+
+button {
+	width: 10%;
+	min-width: 100px;
+	margin: 1rem;
+}
+#modalGallery {
+	position: absolute;
+	width: 98%;
+	top: 0;
+	left: 1%;
+	display: none;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	object-fit: fill;
+}
+.modal-open header,
+.modal-open .navbar,
+.modal-open .mapMap,
+.modal-open .controls,
+.modal-open .container-filter,
+.modal-open #gallery {
+	filter: blur(5px);
+	pointer-events: none;
+}
+.navbar{
+	padding-top: 0.3rem;
+	padding-bottom: 0.3rem;
+}
+.navbar-brand{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(167, 154, 180);
+	border-radius: 10%;
+	margin-left: 1rem;
+}
+.navbar-brand:hover{
+	background-color: rgb(140, 113, 167);
+}
+
+.container {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	gap: 1rem;
+}
+
+.modalControl{
+	display: flex;
+	width: 39%;
+	flex-direction: column;
+}
+.modalControl button{
+	width: 100px;
+	background-color: bisque;
+	border: 1px solid rgb(175, 140, 98);
+}
+.controlItem {
+	min-width: 100px;
+	border-radius: 5%;
+	background-color: rgb(140, 113, 167);
+	border: 1px dashed rgb(140, 113, 167);
+	color: antiquewhite;
+
+
+}
+#routeLen {
+	padding: 0.2rem;
+}
+#show {
+	border: 0;
+}
+.galleryMap{
+	align-self: center;
+	width: 90%;
+	height: 300px;
+}
+.mapMap {
+	align-self: center;
+	width: 80%;
+	height: 600px;
+}
+.separate{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+}
+#closeGallery,
+#stopSlideShow{
+	border-radius: 5%;
+	background-color: rgb(140, 113, 167);
+	border: 1px dashed rgb(140, 113, 167);
+	color: antiquewhite;
+}
+@media screen and (max-width: 726px) {
+    #modalGallery {
+        display: flex;
+        flex-direction: column;
+    }
+	.modalControl{
+		position: relative;
+	}
+	.galleryMap{
+		width: 89%;
+	}
+}
